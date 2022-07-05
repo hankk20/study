@@ -11,7 +11,7 @@ public class JoinController {
 
     @PostMapping(value = "/join")
     public ResponseEntity join(@Validated @RequestBody JoinRequest joinRequest){
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(new JoinResponse(1L, Status.ENABLE));
     }
 
 }
