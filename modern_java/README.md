@@ -20,12 +20,12 @@
               각 서브태스크의 결과를 합침
           }
   ```
-- [RecursiveTask 예제](/src/hankk20/modern_java/parallel/ForkJoinSumCalculator.java) CPU Core 수만큼 ForJoinPool에 쓰레드 생성
+- [RecursiveTask 예제](/modern_java/src/hankk20/modern_java/parallel/ForkJoinSumCalculator.java) CPU Core 수만큼 ForJoinPool에 쓰레드 생성
 
   ![CPU Core 수만큼 ForJoinPool에 쓰레드 생성](https://user-images.githubusercontent.com/60081600/208114763-4e5fd1c5-f7f1-4dc4-8f8c-afc30f2cc714.png)
 
 ### 7.3 Spliterator
-- [WordCounterSpliterator](/src/hankk20/modern_java/parallel/WordCounterSpliterator.java), [WordCounter](/src/hankk20/modern_java/parallel/WordCounter.java)
+- [WordCounterSpliterator](/modern_java/src/hankk20/modern_java/parallel/WordCounterSpliterator.java), [WordCounter](/modern_java/src/hankk20/modern_java/parallel/WordCounter.java)
 - 동작순서 
   - trySplit 메소드를 호출 하여 분할(Fork)
     - 분할과정은 characteristics영향을 받는다.
