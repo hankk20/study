@@ -28,8 +28,10 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long>{
         }
         //배열의 첫 번째 절반을 더하도록 서브태스크 생성
         ForkJoinSumCalculator leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
+        //fork 쓰레드 분기
         leftTask.fork();
         //배열의 나머지 절반을 더하도록 서브태스크 생성
+        //2번째 Task를 fork 하지 않는 이유는 메인 쓰레드를 사용 하기 위함
         ForkJoinSumCalculator rightTask = new ForkJoinSumCalculator(numbers, start+length/2, end);
         Long rightResult = rightTask.compute();
         Long leftResult = leftTask.join();
@@ -49,7 +51,8 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long>{
     }
 
     public static void main(String[] args) {
-        long[] longs = LongStream.rangeClosed(1, 1_000_000).toArray();
+        System.out.println("availableProcessors => " +Runtime.getRuntime().availableProcessors());
+        long[] longs = LongStream.rangeClosed(1, 10_000_000).toArray();
         ForkJoinSumCalculator forkJoinSumCalculator = new ForkJoinSumCalculator(longs);
         Long invoke = new ForkJoinPool().invoke(forkJoinSumCalculator);
         System.out.println(invoke);
