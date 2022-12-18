@@ -46,6 +46,9 @@
 ### 16.1.1 Future 형식 API
 
 - Future 제한
-  - [SimpleFuture](/modern_java/src/hankk20/modern_java/reactive/future/SimpleFuture.java) 
+  - [SimpleFuture](/modern_java/src/hankk20/modern_java/reactive/future/SimpleFuture.java)
   - Future.get()으로 결과를 기다려야 한다.
     ![2022-12-17 23 57 38](https://user-images.githubusercontent.com/60081600/208248073-6759a6e7-94b4-41e6-9a08-1ab82254b3c2.png)
+- CompletableFuture
+  - 오류처리를 하지 않으면 get() 호출시점에서 무한으로 대기 한다.
+    - Complatablefuture.completeExceptionally 를 사용하자.
