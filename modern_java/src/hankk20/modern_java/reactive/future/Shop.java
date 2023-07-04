@@ -49,7 +49,8 @@ public class Shop {
         Shop shop = new Shop();
         long start = System.nanoTime();
 
-        Future<Double> future = shop.getPriceAsync(null);
+        //Future<Double> future = shop.getPriceAsync("abc");
+        Future<Double> future = shop.getPriceAsyncSupply("abc");
 
         long invocationTime = (System.nanoTime() - start) / 1_000_000;
         System.out.println("return "+invocationTime+" mesecs");

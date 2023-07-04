@@ -14,8 +14,9 @@ public class TempInfo {
     }
 
     public static TempInfo fetch(String town){
-        if(random.nextInt(10) ==0){
-            throw new RuntimeException("Error");
+        int i = random.nextInt(10);
+        if(i ==0){
+            throw new RuntimeException("Random number ["+i+"] Error");
         }
         return new TempInfo(town, random.nextInt(100));
     }

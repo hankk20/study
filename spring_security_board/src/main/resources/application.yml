@@ -1,0 +1,42 @@
+server:
+  port: 8081
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+  error:
+    whitelabel:
+      enabled: true
+  shutdown:
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      INDENT_OUTPUT: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+    database: h2
+  datasource:
+    embedded-database-connection: none
+    name: pre
+    url: jdbc:h2:mem:pre_test;LOCK_TIMEOUT=100000
+    #url: jdbc:h2:tcp://localhost/./test
+    username: sa
+    password: 1111
+  h2:
+    console:
+      enabled: false
+      path: /pre-db
+logging:
+  level:
+    #org.hibernate.type.descriptor.sql: trace
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+

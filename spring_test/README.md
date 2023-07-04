@@ -8,11 +8,7 @@
 
 [Spring Boot](https://www.notion.so/hankk/Boot-53914fc78aa24f93ac293c488a2ed48a?pvs=4)
 
-[Spring Security](https://www.notion.so/hankk/Security-d312c947ddda47bcbcc2a4faf6a7bfb0?pvs=4)
-
 [Spring Validation](https://www.notion.so/hankk/Validate-bc01e254ddb04ea2bf38c086e96dbab0?pvs=4)
-
-[JPA & Spring Data](https://www.notion.so/hankk/JPA-5818e337bfe64863bfac691029f9dc55?pvs=4)
 
 [Spring Actuator](https://www.notion.so/hankk/Actuator-8c4116583a3749c2a6be86eafae92fa7?pvs=4)
 
